@@ -2,7 +2,7 @@
 export const restaurantInfo = {
     name: "Periodt Burger",
     tagline: "Your Cravings End Here — PERIODT.",
-    phone: "+91 79844 76448",
+    phone: "+91 79844 74448",
     email: "info@periodtburger.com",
     address: "Kamrej Char Rasta, Surat",
     stats: {
