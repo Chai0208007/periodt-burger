@@ -6,13 +6,13 @@ import logo from '../logo.png';
 const About = () => {
   const [showLocations, setShowLocations] = useState(false);
 
-  // Updated location data with exact Google Maps URLs
+  // Updated location data with a stable Google Maps search URL for Kamrej
   const locations = [
-    {
-      name: "Kamrej (HQ)",
+    { 
+      name: "Kamrej (HQ)", 
       address: "Kamrej Char Rasta, Surat",
-      // Exact Google Maps link for the Kamrej branch
-      mapUrl: "https://maps.app.goo.gl/3XWp7zM8G9T2z8N67"
+      // Using a direct search query URL to avoid dynamic link errors
+      mapUrl: "https://www.google.com/maps/search/?api=1&query=Periodt+Burger+Kamrej+Surat" 
     },
     { name: "Adajan", address: "L.P. Savani Road, Surat" },
     { name: "Bardoli", address: "Station Road, Bardoli" },
@@ -99,12 +99,12 @@ const About = () => {
                       <p className="text-gray-400 text-sm mt-1">{loc.address}</p>
                     </div>
                   </div>
-
-                  {/* Action Button for Kamrej or any branch with a URL */}
+                  
+                  {/* Action Link for Google Maps */}
                   {loc.mapUrl && (
-                    <a
-                      href={loc.mapUrl}
-                      target="_blank"
+                    <a 
+                      href={loc.mapUrl} 
+                      target="_blank" 
                       rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center gap-2 text-[#CD0000] font-black text-xs uppercase tracking-widest hover:text-white transition-colors"
                     >
