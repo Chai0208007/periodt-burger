@@ -42,7 +42,7 @@ const Footer = () => {
                     <div className="space-y-3">
                         <a href="https://wa.me/917984474448" className="flex items-center gap-3 hover:text-white transition-colors">
                             <Phone size={18} className="text-[#ff0000]" />
-                            <span className="text-sm font-bold">+91 79844 76448</span>
+                            <span className="text-sm font-bold">+91 79844 74448</span>
                         </a>
                         <a href="mailto:info@periodtburger.com" className="flex items-center gap-3 hover:text-white transition-colors">
                             <Mail size={18} className="text-[#ff0000]" />
