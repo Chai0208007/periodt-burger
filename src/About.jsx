@@ -1,14 +1,19 @@
 import React, { useState } from 'react';
-import { Users, Utensils, Award, MapPin, ChevronDown } from 'lucide-react';
+import { Users, Utensils, Award, MapPin, ChevronDown, ExternalLink } from 'lucide-react';
 import { restaurantInfo } from './mock';
 import logo from '../logo.png';
 
 const About = () => {
   const [showLocations, setShowLocations] = useState(false);
 
-  // Updated location data
+  // Updated location data with exact Google Maps URLs
   const locations = [
-    { name: "Kamrej (HQ)", address: "Kamrej Char Rasta, Surat" },
+    {
+      name: "Kamrej (HQ)",
+      address: "Kamrej Char Rasta, Surat",
+      // Exact Google Maps link for the Kamrej branch
+      mapUrl: "https://maps.app.goo.gl/3XWp7zM8G9T2z8N67"
+    },
     { name: "Adajan", address: "L.P. Savani Road, Surat" },
     { name: "Bardoli", address: "Station Road, Bardoli" },
     { name: "Jahangirpura", address: "Jahangirpura, Surat" },
@@ -86,12 +91,26 @@ const About = () => {
             <h4 className="text-2xl font-black italic mb-8 text-[#CD0000] uppercase">Our Active Branches:</h4>
             <div className="grid md:grid-cols-2 gap-6">
               {locations.map((loc, index) => (
-                <div key={index} className="flex items-start gap-4 p-6 bg-gray-900 rounded-3xl border border-gray-700 hover:border-[#CD0000] transition-colors">
-                  <MapPin className="text-[#CD0000] shrink-0" />
-                  <div>
-                    <p className="font-black uppercase italic text-lg leading-tight">{loc.name}</p>
-                    <p className="text-gray-400 text-sm mt-1">{loc.address}</p>
+                <div key={index} className="flex flex-col p-6 bg-gray-900 rounded-3xl border border-gray-700 hover:border-[#CD0000] transition-all">
+                  <div className="flex items-start gap-4">
+                    <MapPin className="text-[#CD0000] shrink-0" />
+                    <div className="flex-grow">
+                      <p className="font-black uppercase italic text-lg leading-tight">{loc.name}</p>
+                      <p className="text-gray-400 text-sm mt-1">{loc.address}</p>
+                    </div>
                   </div>
+
+                  {/* Action Button for Kamrej or any branch with a URL */}
+                  {loc.mapUrl && (
+                    <a
+                      href={loc.mapUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-[#CD0000] font-black text-xs uppercase tracking-widest hover:text-white transition-colors"
+                    >
+                      View Exact Location <ExternalLink size={14} />
+                    </a>
+                  )}
                 </div>
               ))}
             </div>
