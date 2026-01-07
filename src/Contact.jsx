@@ -16,7 +16,8 @@ const Contact = () => {
       icon: <MessageSquare size={32} />,
       title: "WhatsApp",
       value: "Chat Now",
-      link: "https://wa.me/917984474448",
+      // Updated to your active WhatsApp number
+      link: "https://wa.me/917984476448",
       label: "Instant Support"
     },
     {
@@ -87,8 +88,10 @@ const Contact = () => {
                 </div>
               </div>
             </div>
+
+            {/* Stable Google Maps Link for Button */}
             <a
-              href="https://maps.google.com"
+              href="https://www.google.com/maps/search/?api=1&query=Periodt+Burger+Kamrej+Surat"
               target="_blank"
               rel="noreferrer"
               className="inline-block"
@@ -99,10 +102,10 @@ const Contact = () => {
             </a>
           </div>
 
-          {/* Embed Google Map */}
+          {/* Corrected Embed Google Map Source */}
           <div className="h-[500px] lg:h-full min-h-[500px] bg-gray-800 relative group">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59508.38423455322!2d72.91574925!3d21.22097745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be04f0525381f15%3A0xc3f173872cf3a7f8!2sKamrej%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3718.397547164917!2d72.9669075!3d21.2557!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0598851458021%3A0x88989e70198031d2!2sPeriodt%20Burger!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin"
               width="100%"
               height="100%"
               style={{ border: 0, filter: 'grayscale(1) contrast(1.2) opacity(0.8)' }}
