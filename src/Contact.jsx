@@ -16,7 +16,7 @@ const Contact = () => {
       icon: <MessageSquare size={32} />,
       title: "WhatsApp",
       value: "Chat Now",
-      link: "https://wa.me/917984476448",
+      link: "https://wa.me/917984474448",
       label: "Instant Support"
     },
     {
